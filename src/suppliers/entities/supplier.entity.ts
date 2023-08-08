@@ -1,6 +1,9 @@
 export class Supplier {
     id: number;
-    name: string;
-    email: string;
-    password: string;
+    nome: string;
+    endereco: string;
+    cidade: string;
+    estadoProvincia: string;
+    pais: string;
+    ativo: number;
 }
