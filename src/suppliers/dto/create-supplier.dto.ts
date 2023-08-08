@@ -1,13 +1,29 @@
-import { IsEmail, IsString, MinLength } from 'class-validator';
+import { IsEmail, IsInt, IsString, Min, MinLength } from 'class-validator';
 
 export class CreateSupplierDto {
-    @IsEmail()
-    email: string;
+    // @IsEmail()
+    // email: string;
 
     @IsString()
-    name: string;
+    nome: string;
 
     @IsString()
-    @MinLength(6)
-    password: string;
+    endereco: string;
+
+    @IsString()
+    cidade: string;
+
+    @IsString()
+    estadoProvincia: string;
+
+    @IsString()
+    pais: string;
+
+    @IsInt()
+    @Min(0)
+    ativo: number;
+
+    // @IsString()
+    // @MinLength(6)
+    // password: string;
 }
