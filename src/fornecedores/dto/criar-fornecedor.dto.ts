@@ -4,7 +4,7 @@
 
 import { IsEmail, IsInt, IsString, Min, MinLength } from 'class-validator';
 
-export class CreateSupplierDto {
+export class CriarFornecedorDto {
     // @IsEmail()
     // email: string;
 

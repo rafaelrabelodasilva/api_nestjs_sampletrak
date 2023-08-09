@@ -1,4 +1,4 @@
-export class Supplier {
+export class Fornecedor {
     id: number;
     nome: string;
     endereco: string;
