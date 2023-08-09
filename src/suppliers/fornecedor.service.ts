@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { CreateSupplierDto } from './dto/create-supplier.dto';
-import { UpdateSupplierDto } from './dto/update-supplier.dto';
-import { Supplier } from './entities/supplier.entity';
+import { CreateSupplierDto } from './dto/criar-fornecedor.dto';
+import { UpdateSupplierDto } from './dto/atualizar-fornecedor.dto';
+import { Supplier } from './entities/fornecedor.entity';
 
 @Injectable()
 export class SuppliersService {

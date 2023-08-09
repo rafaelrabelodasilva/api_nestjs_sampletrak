@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete, NotFoundException } from '@nestjs/common';
-import { SuppliersService } from './suppliers.service';
-import { CreateSupplierDto } from './dto/create-supplier.dto';
-import { UpdateSupplierDto } from './dto/update-supplier.dto';
+import { SuppliersService } from './fornecedor.service';
+import { CreateSupplierDto } from './dto/criar-fornecedor.dto';
+import { UpdateSupplierDto } from './dto/atualizar-fornecedor.dto';
 
 @Controller('suppliers')
 export class SuppliersController {
