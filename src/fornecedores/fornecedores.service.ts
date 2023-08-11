@@ -1,23 +1,23 @@
 import { Injectable, Inject, NotFoundException } from '@nestjs/common';
 import { CriarFornecedorDto } from './dto/criar-fornecedor.dto';
 import { AtualizarFornecedorDto } from './dto/atualizar-fornecedor.dto';
-import { Fornecedor } from './entities/fornecedor.entity';
+import { Fornecedores } from './entities/fornecedor.entity';
 import { Repository } from 'typeorm';
 
 @Injectable()
 export class fornecedoresService {
 
     constructor(
-        @Inject('FORNECEDOR_REPOSITORY')
-        private fornecedorRepository: Repository<Fornecedor>,
+        @Inject('FORNECEDORES_REPOSITORY')
+        private fornecedorRepository: Repository<Fornecedores>,
     ) { }
 
-    async findAll(): Promise<Fornecedor[]> {
+    async findAll(): Promise<Fornecedores[]> {
         return this.fornecedorRepository.find();
     }
 
 
-    private fornecedores: Fornecedor[] = [];
+    private fornecedores: Fornecedores[] = [];
 
     create(criarFornecedorDto: CriarFornecedorDto) {
         const currentMaxId = this.fornecedores[this.fornecedores.length - 1]?.id || 0;

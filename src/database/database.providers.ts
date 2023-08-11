@@ -12,8 +12,8 @@ export const databaseProviders = [
         host: 'localhost',
         port: 3306,
         username: 'root',
-        password: '96315043',
-        database: 'sampletrak',
+        password: 'rafaQa@2022',
+        database: 'sampletrak_db',
         entities: [
             __dirname + '/../**/*.entity{.ts,.js}',
         ],
