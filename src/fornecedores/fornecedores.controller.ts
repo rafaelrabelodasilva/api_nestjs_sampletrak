@@ -5,7 +5,7 @@ import { AtualizarFornecedorDto } from './dto/atualizar-fornecedor.dto';
 
 @Controller('suppliers')
 export class FornecedoresController {
-  constructor(private readonly fornecedoresService: fornecedoresService) {}
+  constructor(private readonly fornecedoresService: fornecedoresService) { }
 
   @Post()
   create(@Body() criarFornecedorDto: CriarFornecedorDto) {
@@ -18,23 +18,21 @@ export class FornecedoresController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: number) {
-    const fornecedor = this.fornecedoresService.findOne(id);
-    
-    if(!fornecedor) {
-            throw new NotFoundException(`O usuário com o id ${id} não existe.`);
+  async findOne(@Param('id') id: number) {
+    const fornecedor = await this.fornecedoresService.findOne(id);
+    if (!fornecedor) {
+      throw new NotFoundException('Fornecedor não encontrado');
     }
-    
     return fornecedor;
-  }
-
-  @Patch(':id')
-  update(@Param('id') id: number, @Body() atualizarFornecedorDto: AtualizarFornecedorDto) {
-    return this.fornecedoresService.update(id, atualizarFornecedorDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: number) {
     return this.fornecedoresService.remove(id);
+  }
+
+  @Patch(':id')
+  update(@Param('id') id: number, @Body() atualizarFornecedorDto: AtualizarFornecedorDto) {
+    return this.fornecedoresService.update(id, atualizarFornecedorDto);
   }
 }

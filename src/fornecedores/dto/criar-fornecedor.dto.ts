@@ -2,7 +2,7 @@
 // Validação de Dados: Os DTOs permitem que você defina regras de validação diretamente nas classes, usando decoradores da biblioteca class-validator. 
 // Estruturação dos Dados: Ao usar DTOs, você pode definir explicitamente quais campos são esperados em cada solicitação ou resposta.
 
-import { IsEmail, IsInt, IsString, Min, MinLength } from 'class-validator';
+import { IsEmail, IsInt, IsNumber, IsString, Min, MinLength } from 'class-validator';
 
 export class CriarFornecedorDto {
     // @IsEmail()
