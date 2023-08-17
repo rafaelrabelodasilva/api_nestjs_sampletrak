@@ -1,11 +1,11 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete, NotFoundException } from '@nestjs/common';
-import { fornecedoresService } from './fornecedores.service';
+import { FornecedoresService } from './fornecedores.service';
 import { CriarFornecedorDto } from './dto/criar-fornecedor.dto';
 import { AtualizarFornecedorDto } from './dto/atualizar-fornecedor.dto';
 
-@Controller('suppliers')
+@Controller('fornecedores')
 export class FornecedoresController {
-  constructor(private readonly fornecedoresService: fornecedoresService) { }
+  constructor(private readonly fornecedoresService: FornecedoresService) { }
 
   @Post()
   create(@Body() criarFornecedorDto: CriarFornecedorDto) {

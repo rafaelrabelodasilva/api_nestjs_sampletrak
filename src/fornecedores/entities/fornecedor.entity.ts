@@ -23,4 +23,5 @@ export class Fornecedores {
 
     @Column()
     ativo: number;
+
 }

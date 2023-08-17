@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { fornecedoresService } from './fornecedores.service';
+import { FornecedoresService } from './fornecedores.service';
 import { FornecedoresController } from './fornecedores.controller';
 import { DatabaseModule } from '../database/database.module';
 import { fornecedoresProviders } from '../fornecedores/fornecedores.providers';
@@ -9,7 +9,7 @@ import { fornecedoresProviders } from '../fornecedores/fornecedores.providers';
   controllers: [FornecedoresController],
   providers: [
     ...fornecedoresProviders,
-    fornecedoresService,
+    FornecedoresService,
   ],
 })
 export class FornecedoresModule {}
