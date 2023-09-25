@@ -35,6 +35,4 @@ export class UsuariosController {
   update(@Param('id') id: number, @Body() AtualizarUsuarioDto: AtualizarUsuarioDto) {
     return this.usuariosService.update(id, AtualizarUsuarioDto);
   }
-
-
 }
