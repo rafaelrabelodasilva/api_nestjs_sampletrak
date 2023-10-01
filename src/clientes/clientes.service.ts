@@ -50,6 +50,4 @@ export class ClientesService {
 
     return this.clienteRepository.save(cliente); // Salvar as alterações
   }
-
-
 }
