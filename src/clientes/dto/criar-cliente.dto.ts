@@ -1,24 +1,22 @@
 import { IsInt, IsString, Min } from "class-validator";
 
-
 export class CriarClienteDto {
-    @IsString()
-    nome: string;
+	@IsString()
+	nome: string;
 
-    @IsString()
-    endereco: string;
+	@IsString()
+	endereco: string;
 
-    @IsString()
-    cidade: string;
+	@IsString()
+	cidade: string;
 
-    @IsString()
-    estadoProvincia: string;
+	@IsString()
+	estadoProvincia: string;
 
-    @IsString()
-    pais: string;
+	@IsString()
+	pais: string;
 
-    @IsInt()
-    @Min(0)
-    ativo: number;
-    
+	@IsInt()
+	@Min(0)
+	ativo: number;
 }
